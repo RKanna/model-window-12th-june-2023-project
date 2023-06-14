@@ -9,6 +9,9 @@ const btnClose = document.getElementById(`btn-close`);
 //container
 const modelContainer = document.getElementById(`model-container`);
 
+//overlay
+const overLay = document.getElementById(`overlay`);
+
 //for selecting all buttons at once
 const btnsAll = document.querySelectorAll(".btn");
 //creating function
@@ -30,27 +33,28 @@ const closeModel = function () {
 };
 
 //adding eventListeners for btnOne
-// btnOne.addEventListener("click", () => {
-//   openModel();
-// });
+btnOne.addEventListener("click", () => {
+  openModel();
+});
 
-// btnTwo.addEventListener("click", () => {
-//   openModel();
-// });
+btnTwo.addEventListener("click", () => {
+  openModel();
+});
 
-// btnThree.addEventListener("click", () => {
-//   openModel();
-// });
+btnThree.addEventListener("click", () => {
+  openModel();
+});
 
-// btnOne.addEventListener("click", openModel);
-// btnTwo.addEventListener("click", openModel);
-// btnThree.addEventListener("click", openModel);
+btnOne.addEventListener("click", openModel);
+btnTwo.addEventListener("click", openModel);
+btnThree.addEventListener("click", openModel);
 
 //loop for querySelectorAll
 
-for (let i = 0; i < btnsAll.length; i++) {
-  btnsAll[i].addEventListener("click", openModel);
-}
+// for (let i = 0; i < btnsAll.length; i++) {
+//   btnsAll[i].addEventListener("click", openModel);
+//   console.log(openModel);
+// }
 
 btnClose.addEventListener("click", () => {
   closeModel();
@@ -60,4 +64,10 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModel();
   }
+});
+
+overLay.addEventListener("click", () => {
+  console.log(modelContainer.style.display);
+  // modelContainer.style.display = "none";
+  modelContainer.classList.add("hidden");
 });

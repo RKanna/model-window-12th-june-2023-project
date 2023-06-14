@@ -33,28 +33,28 @@ const closeModel = function () {
 };
 
 //adding eventListeners for btnOne
-btnOne.addEventListener("click", () => {
-  openModel();
-});
+// btnOne.addEventListener("click", () => {
+//   openModel();
+// });
 
-btnTwo.addEventListener("click", () => {
-  openModel();
-});
+// btnTwo.addEventListener("click", () => {
+//   openModel();
+// });
 
-btnThree.addEventListener("click", () => {
-  openModel();
-});
+// btnThree.addEventListener("click", () => {
+//   openModel();
+// });
 
-btnOne.addEventListener("click", openModel);
-btnTwo.addEventListener("click", openModel);
-btnThree.addEventListener("click", openModel);
+// btnOne.addEventListener("click", openModel);
+// btnTwo.addEventListener("click", openModel);
+// btnThree.addEventListener("click", openModel);
 
 //loop for querySelectorAll
 
-// for (let i = 0; i < btnsAll.length; i++) {
-//   btnsAll[i].addEventListener("click", openModel);
-//   console.log(openModel);
-// }
+for (let i = 0; i < btnsAll.length; i++) {
+  btnsAll[i].addEventListener("click", openModel);
+  console.log(openModel);
+}
 
 btnClose.addEventListener("click", () => {
   closeModel();

@@ -30,6 +30,7 @@ body {
   display: flex;
   gap: 4rem;
   margin-bottom: 4rem;
+  z-index: 1000;
 }
 .btn {
   padding: 1rem 1.2rem;
@@ -43,6 +44,7 @@ body {
   background-color: white;
   border-radius: 2rem;
   box-shadow: var(--dark-shadow);
+  z-index: 1000;
 }
 .white-box {
   padding: 2rem;
@@ -66,7 +68,18 @@ p {
 }
 .open {
   display: flex;
+  z-index: 1000;
 }
 .hidden {
   display: none;
+  z-index: -100;
+}
+.overlay {
+  content: "";
+  min-width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  /* visibility: hidden; */
+  display: flex;
+  background-color: lightgray;
 }
